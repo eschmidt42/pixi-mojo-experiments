@@ -19,6 +19,7 @@ pixi_mojo_experiments = { path = ".", editable = true }
 [tool.pixi.tasks]
 install-pre-commit = "pre-commit install"
 format = { cmd="mojo format .", depends-on = ["install-pre-commit"] }
+test = { cmd="mojo test -I . test" }
 
 
 [tool.pixi.dependencies]

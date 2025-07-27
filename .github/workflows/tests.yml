@@ -27,3 +27,6 @@ jobs:
 
       - name: Build the package
         run: pixi run mojo package pixi_mojo_experiments
+
+      - name: Run tests
+        run: pixi run mojo test -I . test

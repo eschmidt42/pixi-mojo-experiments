@@ -25,6 +25,11 @@ To format code using the `format` pixi task defined in `pyproject.toml`
 
     pixi run format
 
+To test code
+
+    pixi shell
+    mojo test -I . test
+
 ## Notes
 
 Default setup with pixi where code is in `src/` does not seem to easily work yet with the mojo import system -> have your package dir in the project root or add the below to the `pyproject.toml`
@@ -36,6 +41,8 @@ packages = ["./src/pixi_mojo_experiments"]
 `def run_display_simple(var grid: Grid) -> None:` weird: vscode lsp flags `var` but code compiles without error / warning
 
 Running `mojo format` produces `error: unable to resolve Mojo formatter in PATH`, same as when trying the approach from the [gpu puzzles here](https://github.com/modular/mojo-gpu-puzzles/blob/main/pixi.toml#L39) - you need to have "modular" installed ...
+
+configuring of vscode test not obvious, get various req squiggly lines but `mojo test` runs fine
 
 ## Links to things
 

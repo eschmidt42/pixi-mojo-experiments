@@ -5903,7 +5903,7 @@ packages:
 - pypi: .
   name: pixi-mojo-experiments
   version: 0.1.0
-  sha256: b235bd5637c4855dc29c5539c4f240da0084d34db782e9d6e94cd5481bbece81
+  sha256: 7935f7883938e10221c576aaacbc226432c15e027a23d36390bcce6a746dd16e
   requires_python: '>=3.11'
   editable: true
 - conda: https://conda.anaconda.org/conda-forge/linux-64/pixman-0.46.4-h537e5f6_0.conda

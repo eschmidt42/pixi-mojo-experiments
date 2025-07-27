@@ -13,3 +13,8 @@ repos:
         entry: pixi run format
         language: system
         pass_filenames: false
+    -   id: mojo-test
+        name: Mojo Test
+        entry: pixi run test
+        language: system
+        pass_filenames: false
