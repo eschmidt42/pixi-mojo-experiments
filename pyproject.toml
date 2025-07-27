@@ -11,7 +11,7 @@ requires = ["hatchling"]
 
 [tool.pixi.workspace]
 channels = ["https://conda.modular.com/max-nightly", "conda-forge"]
-platforms = ["osx-arm64"]
+platforms = ["osx-arm64","linux-64"]
 
 [tool.pixi.pypi-dependencies]
 pixi_mojo_experiments = { path = ".", editable = true }
