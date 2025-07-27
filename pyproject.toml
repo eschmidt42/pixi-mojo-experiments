@@ -1,0 +1,25 @@
+[project]
+authors = [{name = "eschmidt42", email = "11818904+eschmidt42@users.noreply.github.com"}]
+dependencies = []
+name = "pixi-mojo-experiments"
+requires-python = ">= 3.11"
+version = "0.1.0"
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.pixi.workspace]
+channels = ["https://conda.modular.com/max-nightly", "conda-forge"]
+platforms = ["osx-arm64"]
+
+[tool.pixi.pypi-dependencies]
+pixi_mojo_experiments = { path = ".", editable = true }
+
+[tool.pixi.tasks]
+
+[tool.pixi.dependencies]
+mojo = ">=25.5.0.dev2025072605,<26"
+python = ">=3.13.5,<3.14"
+numpy = ">=2.3.2,<3"
+pytorch = ">=2.7.1,<3"
