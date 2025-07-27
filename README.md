@@ -1,13 +1,44 @@
+# Pixi mojo experiments
+
+> Learning to use mojo with pixi.
+
 ## Setup
 
-https://docs.modular.com/max/packages/
+To create a new project
 
-    pixi init mojo-experiments -c https://conda.modular.com/max-nightly/ -c conda-forge --format pyproject
+    pixi init pixi-mojo-experiments -c https://conda.modular.com/max-nightly/ -c conda-forge --format pyproject
 
-    pixi install
+Adding dependencies in your new project
 
-https://pixi.sh/latest/#getting-started
+    pixi add python pygame
 
-    pixi add python
-    
-    pixi task add start python hello.py
+To rerun installs
+
+    pixi reinstall
+
+To run code
+
+    pixi shell
+    mojo life.mojo
+
+To format code using the `format` pixi task defined in `pyproject.toml`
+
+    pixi run format
+
+## Notes
+
+Default setup with pixi where code is in `src/` does not seem to easily work yet with the mojo import system -> have your package dir in the project root or add the below to the `pyproject.toml`
+```toml
+[tool.hatch.build.targets.wheel]
+packages = ["./src/pixi_mojo_experiments"]
+```
+
+`def run_display_simple(var grid: Grid) -> None:` weird: vscode lsp flags `var` but code compiles without error / warning
+
+Running `mojo format` produces `error: unable to resolve Mojo formatter in PATH`, same as when trying the approach from the [gpu puzzles here](https://github.com/modular/mojo-gpu-puzzles/blob/main/pixi.toml#L39) - you need to have "modular" installed ...
+
+## Links to things
+
+* https://pixi.sh/latest/#getting-started
+* https://docs.modular.com/max/packages/
+* https://docs.modular.com/mojo/manual/get-started/
