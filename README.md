@@ -44,6 +44,8 @@ Running `mojo format` produces `error: unable to resolve Mojo formatter in PATH`
 
 configuring of vscode test not obvious, get various req squiggly lines but `mojo test` runs fine
 
+bummer - as of 2025-07-28 no apple silicon gpu support yet
+
 ## Links to things
 
 * https://pixi.sh/latest/#getting-started
